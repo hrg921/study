@@ -1,0 +1,54 @@
+{
+	"providers": {
+		"awscloudformation": {
+			"AuthRoleName": "myapp-20181223205908-authRole",
+			"UnauthRoleArn": "arn:aws:iam::673489530051:role/myapp-20181223205908-unauthRole",
+			"AuthRoleArn": "arn:aws:iam::673489530051:role/myapp-20181223205908-authRole",
+			"Region": "ap-northeast-1",
+			"DeploymentBucketName": "myapp-20181223205908-deployment",
+			"UnauthRoleName": "myapp-20181223205908-unauthRole",
+			"StackName": "myapp-20181223205908",
+			"StackId": "arn:aws:cloudformation:ap-northeast-1:673489530051:stack/myapp-20181223205908/277e8200-06aa-11e9-8cbb-0a29b069fc22"
+		}
+	},
+	"hosting": {
+		"S3AndCloudFront": {
+			"service": "S3AndCloudFront",
+			"providerPlugin": "awscloudformation",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/myapp-20181223205908-deployment/amplify-cfn-templates/hosting/template.json",
+				"logicalId": "hostingS3AndCloudFront"
+			},
+			"lastPushTimeStamp": "2018-12-23T12:44:44.526Z",
+			"output": {
+				"S3BucketSecureURL": "https://myapp-20181223210234-hostingbucket.s3.amazonaws.com",
+				"WebsiteURL": "http://myapp-20181223210234-hostingbucket.s3-website-ap-northeast-1.amazonaws.com",
+				"Region": "ap-northeast-1",
+				"HostingBucketName": "myapp-20181223210234-hostingbucket"
+			},
+			"lastPushDirHash": "MeDbvBNLc9Sx7zmzi1nF8Z0l6y0="
+		}
+	},
+	"auth": {
+		"cognito48e494ed": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/myapp-20181223205908-deployment/amplify-cfn-templates/auth/cognito48e494ed-cloudformation-template.yml",
+				"logicalId": "authcognito48e494ed"
+			},
+			"lastPushTimeStamp": "2018-12-23T12:44:44.528Z",
+			"output": {
+				"GoogleWebClient": "648479840056-nj5co9pv4frqb59usaq51i4mig52d4du.apps.googleusercontent.com",
+				"AppClientSecret": "1i72b12rghm8smi60118tf4fafhs62ommjtgqsts4lgnkdbuqiou",
+				"UserPoolId": "ap-northeast-1_agcNWEBO1",
+				"AppClientIDWeb": "7m8o584qorngm1dop73o754ah5",
+				"AppClientID": "49al58vehfeu3hlocrmgoc5e8t",
+				"IdentityPoolId": "ap-northeast-1:dae74014-e4ab-4b54-96e6-215924016c63",
+				"IdentityPoolName": "myapp48e494ed_identitypool_48e494ed",
+				"UserPoolName": "myapp48e494ed_userpool_48e494ed"
+			},
+			"lastPushDirHash": "y5F4THSeGvYTsq6VQgHfNAKgfh4="
+		}
+	}
+}
