@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  GraphQL:
+    Properties:
+      CodeUri: s3://apollo-lambda-graphql/0a05a3c20e2091d4938e82622e4cf140
+      Events:
+        AnyRequest:
+          Properties:
+            Method: ANY
+            Path: /graphql
+          Type: Api
+      Handler: graphql.handler
+      Runtime: nodejs8.10
+    Type: AWS::Serverless::Function
+Transform: AWS::Serverless-2016-10-31
